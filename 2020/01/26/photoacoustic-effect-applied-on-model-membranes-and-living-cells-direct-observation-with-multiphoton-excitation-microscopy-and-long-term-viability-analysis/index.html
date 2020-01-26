@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="description" content="Miyoshichi&#39;s blog">
+  <meta name="author" content="Miyoshichi">
+  <meta name="keywords" content="">
+  <title>【论文阅读】利用多光子显微镜对被应用了光声效应的模型膜和活细胞的直接观察及长期分析 - 含英咀华</title>
+
+  <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css"  >
+<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css"  >
+<link rel="stylesheet" href="/lib/mdbootstrap/css/mdb.min.css"  >
+<link rel="stylesheet" href="/lib/github-markdown/github-markdown.min.css"  >
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1067060_qzomjdt8bmp.css">
+
+
+
+  <link rel="stylesheet" href="/lib/prettify/tomorrow-night-eighties.min.css"  >
+
+<link rel="stylesheet" href="/css/main.css"  >
+
+
+  <link rel="stylesheet" href="/lib/fancybox/jquery.fancybox.min.css"  >
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>含英咀华</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">首页</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">归档</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/categories/">分类</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/tags/">标签</a>
+          </li>
+        
+          
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">关于</a>
+          </li>
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background"
+         style="background: url('https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-56799-9/MediaObjects/41598_2019_56799_Fig1_HTML.png')no-repeat center center;
+           background-size: cover;
+           background-attachment: fixed;">
+      <div class="full-bg-img">
+        <div class="mask rgba-black-light flex-center">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <br>
+              
+                <p class="mt-3">
+                  <i class="fas fa-calendar-alt" aria-hidden="true"></i>&nbsp;
+                  星期日, 一月 26日 2020, 3:21 下午
+                </p>
+              
+
+              <p>
+                
+                  
+                  &nbsp;<i class="far fa-chart-bar"></i>
+                  <span class="post-count">
+                    2.6k 字
+                  </span>&nbsp;
+                
+
+                
+                  
+                  &nbsp;<i class="far fa-clock"></i>
+                  <span class="post-count">
+                      8 分钟
+                  </span>&nbsp;
+                
+
+                
+                  <!-- 不蒜子统计文章PV -->
+                  
+                  &nbsp;<i class="far fa-eye" aria-hidden="true"></i>&nbsp;
+                  <span id="busuanzi_container_page_pv">
+                    <span id="busuanzi_value_page_pv"></span> 次
+                  </span>&nbsp;
+                
+              </p>
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="py-5 z-depth-3" id="board">
+        <div class="post-content mx-auto" id="post">
+          <div class="markdown-body">
+            <p>当周期性变化的光照与强光吸收物质相互作用时，会产生光声效应。比如在水中，可能会产生热气泡与冲击波，这会影响附近细胞膜的完整性，使得膜上会暂时打开一个小孔（即光穿孔）。论文中评估了脉冲红外激光辐射对模型膜和中国仓鼠的卵巢（CHO）细胞上的碳纳米粒子（cNP）的影响。对负载有钙黄绿素的脂质体的荧光寿命测量结果支持了光声效应会在细胞上暂时开口的观点，其扩散的通量正与此处粒子浓度的梯度相关。对于CHO细胞，论文表明这种效应可以诱导细胞内钙黄绿素的运输及细胞化合物的释放。后一过程已在脉冲红外激光辐射下利用多光子激发显微镜实时记录。通过流式细胞仪测定钙黄绿素的负载量和细存活率，测量细胞的坏死和早期凋亡率。为了进一步评估经过严格治疗后的长期细胞恢复，将细胞重新播种后记录其行为48小时。这些对细胞生存力的扩展研究表明，在低辐射（低于50mJ/cm^2）条件下，使用脉冲激光对cNP进行光穿孔可被认为是一种合适的细胞内传递物质的技术。</p>
+<a id="more"></a>
+
+<h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>当周期性变化的光照与强光吸收物质相互作用时，会产生光声效应。比如在水中，可能会产生热气泡与冲击波，这会影响附近细胞膜的完整性，使得膜上会暂时打开一个小孔（即光穿孔）。论文中评估了脉冲红外激光辐射对模型膜和中国仓鼠的卵巢（CHO）细胞上的碳纳米颗粒（cNP）的影响。对负载有钙黄绿素的脂质体的荧光寿命测量结果支持了光声效应会在细胞上暂时开口的观点，其扩散的通量正与此处粒子浓度的梯度相关。对于CHO细胞，论文表明这种效应可以诱导细胞内钙黄绿素的运输及细胞化合物的释放。后一过程已在脉冲红外激光辐射下利用多光子激发显微镜实时记录。通过流式细胞仪测定钙黄绿素的负载量和细存活率，测量细胞的坏死和早期凋亡率。为了进一步评估经过严格治疗后的长期细胞恢复，将细胞重新播种后记录其行为48小时。这些对细胞生存力的扩展研究表明，在低辐射（低于50mJ/cm^2）条件下，使用脉冲激光对cNP进行光穿孔可被认为是一种合适的细胞内传递物质的技术。</p>
+<h1 id="碳纳米颗粒的性质"><a href="#碳纳米颗粒的性质" class="headerlink" title="碳纳米颗粒的性质"></a>碳纳米颗粒的性质</h1><p>图1显示了一张具有代表性的cNP超低温电镜图像。cNP并没有表现出规则的形状，而是聚集成一个20-30nm大小的单元，从而形成了不规则的结构。<br><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-56799-9/MediaObjects/41598_2019_56799_Fig1_HTML.png" srcset="/img/loading.gif" alt="图1"></p>
+<h1 id="模型膜上的声光效应"><a href="#模型膜上的声光效应" class="headerlink" title="模型膜上的声光效应"></a>模型膜上的声光效应</h1><p>论文的首要目标是通过荧光寿命测量脂质体渗漏来研究可能的细胞破坏机制。为此，论文事先准备了一些载有高度浓缩的荧光钙黄绿素的大型单层脂质体和游离钙黄绿素的混合物，两者比例从0%到100%，并通过测量其荧光寿命进行分析，通过相关公式计算出通量的比率。图2A显示了实际通量比率值与计算得到的理论值之间具有良好的一致性，与钙黄绿素的浓度正相关。图2B显示了不同比例情况下下，通量比率与荧光寿命的关系，可以发现在通量比率不大于60%时，荧光寿命均约为0.4ns（蓝色三角），这是因为脂质体中的钙黄绿素迅速释放出来。这种关系也可通过另一种试剂——曲拉通X-100证明（红色方块）。而当有脉冲红外激光照射时，通量比率与荧光寿命相关，呈现出了脂质体中的钙黄绿素缓慢释放的趋势。<br><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-56799-9/MediaObjects/41598_2019_56799_Fig2_HTML.png" srcset="/img/loading.gif" alt="图2"></p>
+<h1 id="钙黄绿素的吸收"><a href="#钙黄绿素的吸收" class="headerlink" title="钙黄绿素的吸收"></a>钙黄绿素的吸收</h1><p>论文通过研究脉冲红外激光照射存在cNP的CHO细胞时，细胞内的钙黄绿素的传递来测试真实细胞中的光声效应。图3显示了共聚焦显微镜下的CHO的图像。200000个含有40μg/ml的cNP的CHO细胞放置在400 μM的钙黄绿中，并用50mJ/cm^2的红外激光照射60秒。图3A显示了细胞轮廓、载有cNP的细胞（绿色）和死亡细胞（红色）这三个通道的合成图像，图3B为仅含有绿色通道时的图像。从该图中可以得到这样几个结论：</p>
+<pre><code class="html">1. 光声效应促进了钙黄绿素在细胞内的传递；
+2. 绝大部分的细胞存活性良好，因为只有1-2%的细胞呈现出红色，即死亡；
+3. 内部不同钙黄绿素含量的细胞呈现出不同的亮度。</code></pre>
+<p><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-56799-9/MediaObjects/41598_2019_56799_Fig3_HTML.png" srcset="/img/loading.gif" alt="图3"><br>为了进一步评估钙黄绿素的吸收因素，在保持其他参数不变的情况下，改变脉冲红外激光的辐射强度，对同一样品中不同区域中拍摄的图像单位面积色彩强度进行平均，并与完全吸收的细胞的强度进行比较。图4显示了比较结果，其中钙黄绿素的吸收以百分比表示，是不同激光能量下外部介质中钙黄绿素的函数，激光能量分别为50, 100和200 mJ/cm^2。随着激光能量的增加，吸收强度增加。且可以看到，细胞内的物质传递与浓度呈正线性相关，符合<a href="https://zh.wikipedia.org/wiki/扩散作用#菲克定律" target="_blank" rel="noopener">菲克第一定律</a>。<br><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-56799-9/MediaObjects/41598_2019_56799_Fig4_HTML.png" srcset="/img/loading.gif" alt="图4"></p>
+<h1 id="钙黄绿素的释放"><a href="#钙黄绿素的释放" class="headerlink" title="钙黄绿素的释放"></a>钙黄绿素的释放</h1><p>多光子激发结合共聚焦显微镜可以观察并记录光声效应。因此，按前述方法制备的载有钙黄绿素的CHO细胞用共聚焦显微镜观察，并用波长为1000 nm的飞秒红外激光照射120秒，记录绿色通道（515 nm）中的声光效应过程。图5A显示了记录的过程，显示了有cNP和无cNP的CHO细胞在第一帧和最后一帧的图像。可以观察到在有cNP的CHO细胞中出现了光漂白的现象。为了进一步量化和图形化该过程，图5B显示了每帧的平均光强度与时间的关系。可以看出有cNP的CHO细胞荧光强度持续衰减，显示出钙黄绿素从细胞中释放出来并在培养基中被稀释，表现出光声效应在活细胞膜上产生了暂时的开孔。<br><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-56799-9/MediaObjects/41598_2019_56799_Fig5_HTML.png" srcset="/img/loading.gif" alt="图5"></p>
+<h1 id="细胞内传递与活性"><a href="#细胞内传递与活性" class="headerlink" title="细胞内传递与活性"></a>细胞内传递与活性</h1><p>现在我们知道了可以在细胞膜上产生光声效应，那么下一步就是要知道激光辐射的能量和辐射时间是如何影响细胞内的传递和细胞活性的，这将有助于我们选择适合的条件，以便将分子输送到细胞中而不损害其活性。论文采用了流式细胞仪，可将坏死细胞用碘化丙啶染成红色，通过荧光标记FITC（异硫氰酸荧光素）标记染色膜联蛋白A5来检测早期凋亡的细胞，因为早期凋亡的细胞不应当被视为能具有长期活力的细胞。图6A显示了60秒的持续光照下，不同激光能量密度（单位面积上的能量）对钙黄绿素的吸收和细胞活力的影响。随着激光能量的增加，这两个值均增加，但是速度不同。在低辐射的情况下，细胞内传递急剧改善，而细胞死亡率依然保持较低水平。图6B显示了激光辐射时间的影响，其中样品被60 mJ/cm^2的激光持续照射。可以看出，细胞内传递在开始时随时间迅速增加，在40s达到恒定值。而细胞死亡率随时间流逝缓慢升高。在此条件下，最适合的辐射时间是40s，因为随着时间的增加，钙黄绿素的吸收并没有更大改善，但细胞死亡率却在持续升高。<br><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-56799-9/MediaObjects/41598_2019_56799_Fig6_HTML.png" srcset="/img/loading.gif" alt="图6"></p>
+<h1 id="长期细胞活力"><a href="#长期细胞活力" class="headerlink" title="长期细胞活力"></a>长期细胞活力</h1><p>一种评估暴露于恶劣条件下的细胞长期活力的可靠方法是将其重新接种在平面上，已验证天然健康细胞的特性是否维持。图7显示了在不同激光辐射强度下，对含有40μg/ml的cNP的CHO细胞照射60秒后，重新接种48小时后的结果。相对于对照组（图7A），所有样品均显示出了负面的结果。如图7B中被46mJ/cm^2照射的样品，显示出了扩散的细胞比率有所减少，同时呈现出球形的未扩散的细胞比率更高。在图7C和图7D中分别被66和98mJ/cm^2照射的样品，细胞聚集的减少更为明显，因为不能被认为从激光辐射中恢复。<br><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41598-019-56799-9/MediaObjects/41598_2019_56799_Fig7_HTML.png" srcset="/img/loading.gif" alt="图7"></p>
+<h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>在活细胞附近，由于脉冲激光辐射碳纳米粒子时出现光声效应产生的热气泡和冲击波，对细胞膜产生了干扰。这种细胞膜的损伤是暂时的，并可以快速修复。然而仅仅利用流式细胞仪着眼于坏死细胞的比例的评估细胞状态的方法无法直接确定细胞长期活力。使细胞膜处于高压力下来增加细胞内传递的方法可能引起细微的细胞改变，最终可能导致细胞损伤，损害细胞的存货。通过研究更长时间段内的细胞活力，试图阐明细胞在此过程后是否还能保留其基本功能，可以进行更全面的研究。</p>
+
+            <hr>
+          </div>
+          <br>
+          <div>
+            <p>
+            
+            
+              <span>
+                <i class="iconfont icon-tag"></i>
+                
+                  <a class="hover-with-bg" href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB">论文阅读</a>
+                
+              </span>
+            
+            </p>
+            
+              <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" target="_blank" rel="nofollow noopener noopener">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="d-none d-lg-block col-lg-2 toc-container">
+      
+  <div id="toc">
+    <p class="h4"><i class="far fa-list-alt"></i>&nbsp;目录</p>
+    <div id="tocbot"></div>
+  </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- custom -->
+
+
+<!-- Comments -->
+<div class="col-lg-7 mx-auto nopadding-md">
+  <div class="container comments mx-auto" id="comments">
+    
+  </div>
+</div>
+
+    
+  </main>
+
+  
+    <a class="z-depth-1" id="scroll-top-button" href="#" role="button">
+      <i class="fa fa-chevron-up scroll-top-arrow" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><b>Hexo</b></a>
+    <i class="iconfont icon-love"></i>
+    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"> <b>Fluid</b></a>
+    <br>
+
+    
+  
+    <!-- 不蒜子统计PV -->
+    
+    &nbsp;<span id="busuanzi_container_site_pv">总访问量 
+          <span id="busuanzi_value_site_pv"></span> 次</span>&nbsp;
+  
+  
+    <!-- 不蒜子统计UV -->
+    
+    &nbsp;<span id="busuanzi_container_site_uv">总访客数 
+            <span id="busuanzi_value_site_uv"></span> 人</span>&nbsp;
+  
+  <br>
+
+
+
+    
+
+
+    <!-- cnzz Analytics icon -->
+    
+
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script src="/lib/jquery/jquery.min.js" ></script>
+<script src="/lib/popper/popper.min.js" ></script>
+<script src="/lib/bootstrap/js/bootstrap.min.js" ></script>
+<script src="/lib/mdbootstrap/js/mdb.min.js" ></script>
+<script src="/js/main.js" ></script>
+
+
+  <script src="/js/lazyload.js" ></script>
+
+
+
+  
+    <script src="/lib/tocbot/tocbot.min.js" ></script>
+  
+  <script src="/js/post.js" ></script>
+
+
+
+  <script src="/lib/smooth-scroll/smooth-scroll.min.js" ></script>
+
+
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+<!-- Plugins -->
+
+
+  
+
+  
+
+  
+
+  
+
+  <!-- cnzz Analytics -->
+  
+
+
+
+  <script src="/lib/prettify/prettify.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      $('pre').addClass('prettyprint  linenums');
+      prettyPrint();
+    })
+  </script>
+
+
+
+  <script src="/lib/typed/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "【论文阅读】利用多光子显微镜对被应用了光声效应的模型膜和活细胞的直接观察及长期分析&nbsp;",
+      ],
+      cursorChar: "|",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="/lib/anchor/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "false",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      getSearchFile(path);
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="/lib/fancybox/jquery.fancybox.min.js" ></script>
+  <script>
+    $("#post img:not(.no-zoom img, img[no-zoom])").each(
+      function () {
+        var element = document.createElement("a");
+        $(element).attr("data-fancybox", "images");
+        $(element).attr("href", $(this).attr("src"));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
